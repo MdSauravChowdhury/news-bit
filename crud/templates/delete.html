@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}	
+
+{% block news_content %}
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">Create Your Post</div>
+        <div class="panel-footer">
+            <form action="" method="POST">
+                
+                {% csrf_token %}
+                <input type="submit" class="btn btn-danger" value="Delete">
+                
+            </form>
+            <a href="index" class="btn btn-success">Cancel</a>
+        </div>
+    </div>
+</div>
+	
+	
+{% endblock news_content %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}	
+
+{% block news_content %}
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">Create Your Post</div>
+        <div class="panel-footer">
+            <form action="" method="POST" enctype="multipart/form-data">
+
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" class="btn btn-success" value="Post">
+                
+            </form>
+        </div>
+    </div>
+</div>
+	
+{% endblock news_content %}

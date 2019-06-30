@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+	
+{% block news_content %}
+
+
+<div class="container">
+    {% if message %}
+    <div class="alart">
+        {{ message }}
+    </div>
+    {% endif %}
+    <div class="jumbotron">
+        <h2>Please Register Here</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
+
+    </div>
+</div>
+
+{% endblock news_content %}
